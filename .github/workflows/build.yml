@@ -101,7 +101,6 @@ jobs:
       run: |
         cd onl
         echo -e "$(nproc) thread compile"
-    # make -j$(nproc) || make -j1 || make -j1 V=s
         echo "::set-output name=status::success"
         echo "INSTALLED_INSTALLER" > DEVICE_NAME
         [ -s DEVICE_NAME ] && echo "DEVICE_NAME=_$(cat DEVICE_NAME)" >> $GITHUB_ENV
